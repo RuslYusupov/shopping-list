@@ -1,0 +1,185 @@
+.shopping-list-item-card {
+    margin-top: 50px;
+}
+
+.shopping-list-item-card h2 {
+    font-size: 2rem;
+    padding-left: 20px;
+}
+
+.heading-and-icons-list-item-card {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.heading-and-checkbox-label-list-item-card {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.checkbox-label-list-item-card {
+    height: 30px;
+    width: 30px;
+    background: radial-gradient(#eceff6, #e7f0f9);
+    border: #ccd9e2;
+    border-radius: 50%;
+    box-shadow: 7px 13px 4px #c8d9e3;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.checkbox-label-list-item-card input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+} 
+  
+.checkbox-label-list-item-card .checkbox-custom-list-item-card {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    border: 2px solid coral;
+}
+
+.checkbox-label-list-item-card input:checked ~ .checkbox-custom-list-item-card {
+    background-color: transparent;
+    border-radius: 5px;
+    -webkit-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+    border: 2px solid transparent;
+}
+
+.checkbox-label-list-item-card .checkbox-custom-list-item-card::after {
+    position: absolute;
+    content: '';
+    left: 12px;
+    top: 12px;
+    height: 0px;
+    width: 0px;
+    border-radius: 5px;
+    border: solid coral;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(0deg) scale(0);
+    -ms-transform: rotate(0deg) scale(0);
+    transform: rotate(0deg) scale(0);
+    opacity: 1;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+
+.checkbox-label-list-item-card input:checked ~ .checkbox-custom-list-item-card::after {
+    -webkit-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+    left: 8px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid coral;
+    border-width: 0 2px 2px 0;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+
+
+.icons-list-item-card {
+    display: flex;
+}
+
+
+.goIn-list-item-card, .remove-list-item-card, .edit-list-item-card {
+    height: 60px;
+    width: 60px;
+    background: radial-gradient(#eceff6, #e7f0f9);
+    border: #ccd9e2;
+    border-radius: 50%;
+    box-shadow: 7px 13px 4px #c8d9e3;
+    position: relative;
+    cursor: pointer;
+}
+
+.goIn-list-item-card img, .remove-list-item-card img, .edit-list-item-card img {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    cursor: pointer; 
+}
+
+.edit-list-item-card {
+    margin-left: 10px;
+}
+
+.remove-list-item-card {
+    margin-left: 10px;
+}
+
+
+.quantity-and-cost-list-item-card {
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.expected-cost-list-item-card {
+    margin-left: 50px;
+}
+
+
+
+@media (max-width: 641px) {
+  
+    .heading-and-icons-list-item-card {
+        flex-flow: column nowrap;
+    }
+    
+    .heading-and-checkbox-label-list-item-card {
+        justify-content: flex-start;
+    }
+    
+    .icons-list-item-card {
+        margin-top: 15px;
+        justify-content: flex-start;
+        
+    }
+    
+    .edit-list-item-card {
+        margin-left: 170px;
+    }
+    
+    
+    .quantity-and-cost-list-item-card {
+        margin-top: 20px;
+    }
+
+
+}
+
+@media (max-width: 375px) {
+  
+    .edit-list-item-card {
+        margin-left: 120px;
+    }
+
+}

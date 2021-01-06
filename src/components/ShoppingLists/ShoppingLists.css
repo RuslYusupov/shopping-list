@@ -1,0 +1,91 @@
+.add-and-search {
+    display: flex;
+    flex-flow: row nowrap; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.create-new-list-btn, .show-control-panel-btn {
+    margin-top: 45px;
+    padding: 20px 25px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 13px;
+    background-image: linear-gradient(to right, #ebadae 0%, #e5a6ae 51%, #d89aa7 100%);
+    border: 2px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 25%;
+    height: 70px;
+}
+
+
+.create-new-list-btn:hover, .show-control-panel-btn:hover {
+    background-position: right center; /* change the direction of the change here */
+}
+
+.search-bar {
+  margin-top: 35px;
+  position: relative;
+  width: 25%;
+}
+
+.add-and-search input {
+    padding: 8px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px #ff7c7c, 0 0 0 5px;
+    width: 100%;
+}
+
+.add-and-search img {
+  top: 6px;
+  left: 195px;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+}
+
+
+.forWrapList {
+  margin-bottom: 60px;
+}
+
+
+
+@media (max-width: 1200px) {
+  .create-new-list-btn, .show-control-panel-btn {
+    padding: 10px 25px;
+  }
+
+}
+
+
+
+@media (max-width: 641px) {
+  .add-and-search {
+    flex-flow: row wrap; 
+  }
+
+  .create-new-list-btn, .show-control-panel-btn {
+    margin-top: 35px;
+    width: 45%;
+    height: 85px;
+  }
+
+  .search-bar {
+    margin: 0 auto;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    width: 98%;
+  }
+
+  .add-and-search img {
+    left: 90%;
+  }
+
+}

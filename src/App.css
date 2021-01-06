@@ -1,0 +1,387 @@
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Styling start */
+
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 62.5%; /* Для использования em. Теперь 1rem = 10px */
+  overflow: auto;  
+  background-color: #E4F1FA;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-container {
+  margin: 0 auto;
+  width: 60%;
+}
+
+
+/* Main Styling end */
+
+/* Control elements start */
+
+.control-elements {
+  margin-top: 45px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.control-elements-row {
+  display: flex;
+  flex-flow: row nowrap; 
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.control-elements-btn {
+  padding: 20px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 13px;
+  background: rgb(76, 125, 216);
+  border: 2px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 25%;
+  height: 80px;
+}
+
+
+/* Control elements end */
+
+/* Pop Up Window for lists start */
+
+
+.popup-window-list {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #e7a9ae;
+  z-index: 100;
+  font-size: 3rem;
+  display: flex;
+  flex-flow: column nowrap; 
+  align-items: center;
+}
+
+.close-popup-window-list {
+  position: absolute;
+  top: 1%;
+  left: 89%;
+  height: 60px;
+  width: 60px;
+  background: radial-gradient(#eceff6, #e7f0f9);
+  border: #ccd9e2;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-popup-window-list span {
+  position: absolute;
+  top: 13px;
+  left: 21.5px;
+  color: #506082;
+  font-size: 3rem;
+  background-color: transparent;
+  border: none;
+}
+
+.note-in-popup-window-list {
+  margin-top: 75px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.first-heading-in-popup-window-list {
+  margin-top: 65px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.first-heading-in-popup-window-list-change {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.second-heading-in-popup-window-list {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.popup-window-list input {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 2.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 80%;
+}
+
+.popup-window-list-btn {
+  margin-top: 50px;
+  background: radial-gradient(#eceff6, #e7f0f9);
+  border: #ccd9e2;
+  padding: 20px;
+  font-size: 3rem;
+  cursor: pointer;
+  width: 40%;
+  height: 15%;
+}
+
+/* Pop Up Window for lists end */
+
+/* Pop Up Window for items start */
+
+.popup-window-item {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #e7a9ae;
+  z-index: 100;
+  font-size: 3rem;
+  display: flex;
+  flex-flow: column nowrap; 
+  align-items: center;
+}
+
+.close-popup-window-item {
+  position: absolute;
+  top: 1%;
+  left: 89%;
+  height: 60px;
+  width: 60px;
+  background: radial-gradient(#eceff6, #e7f0f9);
+  border: #ccd9e2;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-popup-window-item span {
+  position: absolute;
+  top: 13px;
+  left: 21.5px;
+  color: #506082;
+  font-size: 3rem;
+  background-color: transparent;
+  border: none;
+}
+
+
+.note-in-popup-window-item {
+  margin-top: 75px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.first-heading-in-popup-window-item {
+  margin-top: 65px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.first-heading-in-popup-window-item-change {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.second-heading-in-popup-window-item{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.popup-window-item input {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 2rem;
+  padding: 0.7rem 1rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 80%;
+}
+
+.popup-window-btn-item {
+  margin-top: 50px;
+  background: radial-gradient(#eceff6, #e7f0f9);
+  border: #ccd9e2;
+  padding: 20px;
+  font-size: 3rem;
+  cursor: pointer;
+  width: 40%;
+  height: 10%;
+}
+
+
+/* Pop Up Window for items end */
+
+
+/* Mobiles */
+
+@media (max-width: 641px) {
+  
+  /* Main Styling start */
+  
+  .main-container {
+    margin: 0 auto;
+    width: 97%;
+  }
+  
+  /* Main Styling end */
+
+
+  /* Control Elements start */
+
+  .control-elements-row {
+    flex-flow: column nowrap; 
+  }
+  
+  .control-elements-btn {
+    margin-top: 15px;
+    width: 100%;
+    height: 60px;
+  }
+
+  .control-elements-btn:first-child {
+    margin-top: 0px;
+  }
+
+
+  /* Control Elements start */
+
+
+  /* Pop Up Window for lists start */
+  
+  .popup-window-list {
+      font-size: 4rem;
+  }
+  
+  .close-popup-window-list {
+      left: 83%;
+  }
+
+  .first-heading-in-popup-window-list {
+      margin-top: 25%;
+  }
+  
+  .popup-window-list input {
+    font-size: 2rem;
+  }
+
+  .popup-window-list-btn {
+      width: 70%;
+  }
+
+  /* Pop Up Window for lists end */
+
+  /* Pop Up Window for items start */
+
+  .close-popup-window-item {
+    left: 83%;
+  }
+
+  .first-heading-in-popup-window-item {
+    margin-top: 19%;
+  }
+
+  .popup-window-item input {
+    font-size: 1.5rem;
+  }
+
+  .popup-window-btn-item {
+    width: 70%;
+  }
+
+  /* Pop Up Window for items end */
+
+
+}
+
+
+@media (max-width: 375px) {
+  
+  /* Pop Up Window for lists start */
+
+  .close-popup-window-list {
+    left: 79%;
+  }
+
+  /* Pop Up Window for lists end */
+  
+  /* Pop Up Window for items start */
+
+  .popup-window-item {
+    height: 100%;
+  }
+
+  .close-popup-window-item {
+    left: 80%;
+  }
+
+  
+  .first-heading-in-popup-window-list-change {
+    margin-top: 20px;
+    font-size: 2.5rem;
+  }
+
+  .second-heading-in-popup-window-list {
+    margin-top: 20px;
+    font-size: 2.5rem;
+  }
+
+  .first-heading-in-popup-window-item {
+    font-size: 1.5rem;
+    margin-top: 57px;
+    margin-bottom: 15px;
+  }
+
+  .first-heading-in-popup-window-item-change {
+    margin-top: 20px;
+    font-size: 2.5rem;
+  }
+  
+  .second-heading-in-popup-window-item{
+    font-size: 1.5rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .popup-window-item input {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 2rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 80%;
+  }
+
+  /* Pop Up Window for items end */
+
+}
+

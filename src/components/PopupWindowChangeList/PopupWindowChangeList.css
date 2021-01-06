@@ -1,0 +1,46 @@
+.popup-window {
+    position: absolute;
+    top: 4%;
+    width: 40%;
+    height: 500px;
+    background-color: #e7a9ae;
+    z-index: 100;
+    padding-left: 20px;
+    font-size: 3rem;
+    display: flex;
+    flex-flow: column nowrap; 
+    align-items: center;
+}
+
+.close-popup-window {
+    position: absolute;
+    top: 1%;
+    left: 89%;
+    height: 60px;
+    width: 60px;
+    background: radial-gradient(#eceff6, #e7f0f9);
+    border: #ccd9e2;
+    border-radius: 50%;
+}
+
+.close-popup-window span {
+    position: absolute;
+    top: 13px;
+    left: 21.5px;
+    color: #506082;
+    font-size: 3rem;
+    background-color: transparent;
+    border: none;
+}
+
+.name-for-the-list {
+    margin-top: 65px;
+}
+
+.create-list-btn {
+    margin-top: 20px;
+    background: radial-gradient(#eceff6, #e7f0f9);
+    border: #ccd9e2;
+    padding: 20px;
+    font-size: 3rem;
+}

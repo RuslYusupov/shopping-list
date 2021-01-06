@@ -1,0 +1,40 @@
+.visualisation-donut-block {
+    position: absolute;
+    top: 4%;
+    width: 50%;
+    height: 500px;
+    background-color: white;
+    z-index: 100;
+    padding-left: 20px;
+    font-size: 3rem;
+    display: flex;
+    flex-flow: column nowrap; 
+    align-items: center;
+}
+
+.close-popup-window-donut {
+    position: absolute;
+    top: 1%;
+    left: 89%;
+    height: 60px;
+    width: 60px;
+    background: radial-gradient(#eceff6, #e7f0f9);
+    border: #ccd9e2;
+    border-radius: 50%;
+}
+
+.close-popup-window-donut span {
+    position: absolute;
+    top: 13px;
+    left: 21.5px;
+    color: #506082;
+    font-size: 3rem;
+    background-color: transparent;
+    border: none;
+}
+
+
+.visualisation-donut-contaner {
+    margin-top: 70px;
+    width: 100%;
+}

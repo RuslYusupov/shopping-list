@@ -1,0 +1,71 @@
+.back-to-lists-block {
+    margin-top: 35px;
+}
+
+.back-to-lists-btn {
+    font-size: 2rem;
+    background-color:green;
+    padding: 15px;
+    border-radius: 13px;
+    color: white;
+}
+
+.heading-in-list {
+    font-size: 4rem;
+}
+
+.subtitle-in-list {
+    margin-top: 20px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+
+.add-and-control {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.add-item-btn, .show-control-pan-btn {
+    font-size: 1.5rem;
+    text-align: center;
+    background-image: linear-gradient(to right, #ebadae 0%, #e5a6ae 51%, #d89aa7 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 13px;
+    padding: 20px 25px;
+    border-radius: 13px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 2px;
+    width: 25%;
+}
+
+
+.buy-items-btn:hover {
+    background-position: right center; /* change the direction of the change here */
+}
+
+
+.forWrapItem {
+    margin-bottom: 60px;
+}
+
+
+
+@media (max-width: 641px) {
+  
+    .heading-in-list {
+        margin-top: 45px;
+    }
+
+    .add-item-btn, .show-control-pan-btn {
+        width: 45%;
+    }
+
+}
