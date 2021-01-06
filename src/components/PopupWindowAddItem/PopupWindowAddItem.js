@@ -58,28 +58,28 @@ function PopupWindowAddItem({closePopup, currentListObj, listId}) {
         <div onClick={closePopup} className="close-popup-window-item">
             <span>X</span>
         </div>
-        <p className="first-heading-in-popup-window-item">Name for the item</p>
+        <p className="first-heading-in-popup-window-item">Name For The Item:</p>
         <input
             type="text"
             name="nameForItem"
             onChange={handleChange}
             value={inputData.nameForItem}
          />
-        <p className="second-heading-in-popup-window-item">Units</p>
+        <p className="second-heading-in-popup-window-item">Units:</p>
         <input
             type="text"
             name="units"
             onChange={handleChange}
             value={inputData.units}
          />
-          <p className="second-heading-in-popup-window-item">Expected Price (Write only the number)</p>
+          <p className="second-heading-in-popup-window-item">Expected Price (Write Only The Number):</p>
         <input
             type="number"
             name="expectedPrice"
             onChange={handleChange}
             value={inputData.expectedPrice}
          />
-         <p className="second-heading-in-popup-window-item">Note</p>
+         <p className="second-heading-in-popup-window-item">Note:</p>
         <input
             type="text"
             name="note"

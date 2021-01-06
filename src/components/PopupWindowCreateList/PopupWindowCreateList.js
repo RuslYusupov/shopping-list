@@ -36,14 +36,14 @@ function PopupWindowCreateList({closePopup}) {
             <div onClick={closePopup} className="close-popup-window-list">
                 <span>X</span>
             </div>
-            <p className="first-heading-in-popup-window-list">Name for the list</p>
+            <p className="first-heading-in-popup-window-list">Name For The List:</p>
             <input
                 type="text"
                 name="nameForList"
                 onChange={handleChange}
                 value={inputData.nameForList}
              />
-            <p className="second-heading-in-popup-window-list">Buy by</p>
+            <p className="second-heading-in-popup-window-list">Buy By:</p>
             <input
                 type="text"
                 name="buyBy"

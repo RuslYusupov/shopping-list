@@ -19,14 +19,14 @@ function PopupWindowChangeList(props) {
                 <span>X</span>
             </div>
             <h1 className="note-in-popup-window-list">Change the data only that you want to change. You don't need to fill in all 2 fields. An empty field will use the previous data</h1>
-            <p className="first-heading-in-popup-window-list-change">Change Name for the list:</p>
+            <p className="first-heading-in-popup-window-list-change">Change Name For The List:</p>
             <input
                 type="text"
                 name="nameForList"
                 onChange={handleChange}
                 value={inputData.nameForList}
              />
-            <p className="second-heading-in-popup-window-list">Change Buy by:</p>
+            <p className="second-heading-in-popup-window-list">Change Buy By:</p>
             <input
                 type="text"
                 name="buyBy"
