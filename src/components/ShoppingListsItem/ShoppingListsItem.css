@@ -4,6 +4,7 @@
 
 .shopping-list-item-card h2 {
     font-size: 2rem;
+    word-break: break-all;
 }
 
 .heading-and-icons-list-item-card {
