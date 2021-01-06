@@ -38,7 +38,7 @@ function VisualisationDonutComponent({closeVisualisationDonut, visualisationData
             <div onClick={closeVisualisationDonut} className="close-popup-window-donut">
                 <span>X</span>
             </div>
-            <div className="visualisation-donut-contaner">
+            <div className="visualisation-donut-container">
               
               <Pie
                 data={state}
