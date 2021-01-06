@@ -42,13 +42,14 @@ function Item({item}) {
                         <h2 style={{textDecoration: item.completed ? 'line-through' : null}}>{item.nameForItem} | {item.units} </h2>
                     </div>
                     <div className="icons-item-card">
+                        <p className="expected-price-item-card-mobile">Expected Price: {item.expectedPrice}</p>
                         <div onClick={openPopup} className="edit-item-card"><img src={pencil} alt="Edit" /></div>
                         <div onClick={() => removeItem(item.idOfItem, item.idOfList)} className="remove-item-card"><img src={removeIcon} alt="Remove" /></div>
                     </div>
                 </div>
                 <div className="quantity-and-price-item-card">
                     <p className="quantity-item-card">{item.note}</p>
-                    <p className="expected-price-item-card">Expected Price: {item.expectedPrice}</p>
+                    <p className="expected-price-item-card-not-mobile">Expected Price: {item.expectedPrice}</p>
                 </div>
                 
             </div>
