@@ -44,10 +44,12 @@
 
 @media (max-width: 641px) {
     
+    .close-popup-window-donut {
+        left: 76%;
+    }
+
     .visualisation-donut-container {
-        margin-top: 70px;
-        width: 100%;
-        margin-bottom: 20px;
+        width: 90%;
     }
   
 }
