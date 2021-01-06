@@ -21,7 +21,7 @@
 
 .checkbox-label-list-item-card {
     height: 30px;
-    width: 30px;
+    min-width: 30px;
     background: radial-gradient(#eceff6, #e7f0f9);
     border: #ccd9e2;
     border-radius: 50%;
