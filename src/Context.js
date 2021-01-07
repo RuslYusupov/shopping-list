@@ -104,6 +104,7 @@ function ContextProvider({children}) {
             ourListObj.items = []; // Очищаем свойство-массив items в нужном нам листе-объекте
             if(ourListObj.items.length === 0) {
                 ourListObj.completed = false; // В данном if делаем так чтобы при выполненных, а затем удаленных айтемах в какой нибудь листе - в списке листов - лист не показывался как выполненный
+                ourListObj.expectedCost = "No price set"; // Ощищаем для листа общую сумму
                 return [ourListObj, ...listsWithoutList]; // возвращаем обновленный лист и все остальные листы
             }
             return [ourListObj, ...listsWithoutList]; // возвращаем обновленный лист и все остальные листы
