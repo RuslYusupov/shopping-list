@@ -300,21 +300,26 @@ a {
 
   /* Pop Up Window for items start */
 
+  .note-in-popup-window-item {
+    margin-top: 70px;
+    font-size: 1.5rem;
+  }
+
   .close-popup-window-item {
     left: 80%;
   }
 
   .first-heading-in-popup-window-item {
     margin-top: 19%;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   
   .first-heading-in-popup-window-item-change {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   
   .second-heading-in-popup-window-item{
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .popup-window-item input {
@@ -323,6 +328,8 @@ a {
 
   .popup-window-btn-item {
     width: 70%;
+    height: 7%;
+    padding: 10px;
   }
 
   /* Pop Up Window for items end */
@@ -380,17 +387,9 @@ a {
   }
   
   .popup-window-item input {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-    font-size: 2rem;
     padding: 0.5rem 0.8rem;
-    border-radius: 0.2rem;
-    background-color: rgb(255, 255, 255);
-    border: none;
-    width: 80%;
   }
 
   /* Pop Up Window for items end */
 
 }
-
