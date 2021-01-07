@@ -300,12 +300,16 @@ a {
 
   /* Pop Up Window for items start */
 
+  .popup-window-item {
+    height: 100%;
+  }
+
   .close-popup-window-item {
     left: 80%;
   }
 
   .first-heading-in-popup-window-item {
-    margin-top: 19%;
+    margin-top: 80px;
     font-size: 2.5rem;
   }
   
