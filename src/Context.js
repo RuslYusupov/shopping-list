@@ -90,6 +90,8 @@ function ContextProvider({children}) {
             }
             return [ourListObj, ...listsWithoutList]; // возвращаем обновленный лист и все остальные листы
         })
+
+        calculateExpectedCostForOneList(idOfList, idOfItem); // Рассчитываем сумму всех айтемов в листе
     }
 
     function removeAllLists() {
@@ -165,14 +167,21 @@ function ContextProvider({children}) {
         closePopup();
     }
 
-    function calculateExpectedCostForOneList(id) {
+    function calculateExpectedCostForOneList(idOfList, idOfItem) {
         setListItems(prevListItems => {
-            const listsWithoutList = prevListItems.filter(list => list.idOfList !== id); // Удаляем нужный лист с нужными нам айтемами из списка листов
-            const [ourListObj] = prevListItems.filter(list => list.idOfList === id); // Находим нужный нам лист и сразу же destructuring массив из одного объекта
+            const listsWithoutList = prevListItems.filter(list => list.idOfList !== idOfList); // Удаляем нужный лист с нужными нам айтемами из списка листов
+            const [ourListObj] = prevListItems.filter(list => list.idOfList === idOfList); // Находим нужный нам лист и сразу же destructuring массив из одного объекта
             const copyOFOurListObj = {...ourListObj}
             
-            const takeExpectedPrices = copyOFOurListObj.items.map(item => item.expectedPrice); // Переобходим каждый из айтемов и в новый массив сохраняем значения ожидаемой цены каждого айтема
-            
+            let takeExpectedPrices;
+
+            if(idOfItem) { // Активируется в том случае если был удален айтем
+                const itemsWithoutItem = copyOFOurListObj.items.filter(item => item.idOfItem !== idOfItem); // Переобходим айтемы и удаляем нужный нам айтем - возвращается массив из айтемов
+                takeExpectedPrices = itemsWithoutItem.map(item => item.expectedPrice); // Переобходим каждый из айтемов и в новый массив сохраняем значения ожидаемой цены каждого айтема
+            } else { // Для всех остальных ситуация - добавление и изменение айтема
+                takeExpectedPrices = copyOFOurListObj.items.map(item => item.expectedPrice); // Переобходим каждый из айтемов и в новый массив сохраняем значения ожидаемой цены каждого айтема
+            }
+
             const takeExpectedPricesRemoveEmptyStrings = takeExpectedPrices.map(el => { // Проверяем каждый элемемент пустую строку, то есть пользователь не заполнил цену и в этом случае возвращаем строку 0
                 if(el === "No price set") {
                     return "0";
