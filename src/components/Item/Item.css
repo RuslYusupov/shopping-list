@@ -133,7 +133,7 @@
 }
 
 
-.quantity-and-price-item-card {
+.note-and-price-item-card {
     display: flex;
     flex-flow: row nowrap;
     font-size: 1.5rem;
@@ -149,6 +149,10 @@
     display: none;
 }
 
+
+.note-and-price-item-card, .expected-price-item-card-mobile {
+    word-break: break-all;
+}
 
 
 @media (max-width: 641px) {

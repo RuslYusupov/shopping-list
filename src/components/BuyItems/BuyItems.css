@@ -20,6 +20,9 @@
     text-align: center;
 }
 
+.heading-in-list, .subtitle-in-list {
+    word-break: break-all;
+}
 
 .add-and-control {
     display: flex;

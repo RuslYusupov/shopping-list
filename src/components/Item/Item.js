@@ -47,8 +47,8 @@ function Item({item}) {
                         <div onClick={() => removeItem(item.idOfItem, item.idOfList)} className="remove-item-card"><img src={removeIcon} alt="Remove" /></div>
                     </div>
                 </div>
-                <div className="quantity-and-price-item-card">
-                    <p className="quantity-item-card">{item.note}</p>
+                <div className="note-and-price-item-card">
+                    <p className="note-item-card">{item.note}</p>
                     <p className="expected-price-item-card-not-mobile">Expected Price: {item.expectedPrice}</p>
                 </div>
                 
