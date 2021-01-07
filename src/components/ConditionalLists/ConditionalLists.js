@@ -268,7 +268,7 @@ function ConditionalLists(props) {
         ); // отображаются все листы и был клик по сортировке по алфавиту и сортировка от я до а
     } 
     else if(props.inputDataSearch !== "") {
-        const ourListObjForSearch = listItems.filter(list => list.nameForList.includes(props.inputDataSearch)); // Находим нужные нам листы
+        const ourListObjForSearch = listItems.filter(list => list.nameForList.toLowerCase().includes(props.inputDataSearch.toLowerCase())); // Находим нужные нам листы - переобходим листы и если в листе в нижнем регистре есть буквы из введенных в поиске, то листы найдены
         console.log(ourListObjForSearch);
         if(ourListObjForSearch.length > 0) { // Если листы найдены, то переобходим их и выводим их 
             conditionalComletedFilter = ourListObjForSearch.map((item, i) =>
