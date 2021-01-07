@@ -13,6 +13,7 @@ html, body {
   font-size: 62.5%; /* Для использования em. Теперь 1rem = 10px */
   overflow: auto;  
   background-color: #E4F1FA;
+  overflow-x: hidden;
 }
 
 a {
