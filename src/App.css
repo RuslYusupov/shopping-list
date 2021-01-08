@@ -358,7 +358,11 @@ a {
     left: 80%;
   }
 
-  
+  .first-heading-in-popup-window-list {
+    margin-top: 90px;
+    font-size: 2.5rem;
+  }
+
   .first-heading-in-popup-window-list-change {
     margin-top: 20px;
     font-size: 2.5rem;
@@ -370,18 +374,18 @@ a {
   }
 
   .first-heading-in-popup-window-item {
-    font-size: 1.5rem;
-    margin-top: 57px;
+    font-size: 2.5rem;
+    margin-top: 70px;
     margin-bottom: 15px;
   }
 
   .first-heading-in-popup-window-item-change {
     margin-top: 20px;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
   
   .second-heading-in-popup-window-item{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin-top: 15px;
     margin-bottom: 15px;
   }
@@ -402,6 +406,16 @@ a {
 
 @media (max-width: 321px) {
   
+  .close-popup-window-list {
+    height: 40px;
+    width: 40px;
+  }
+  
+  .close-popup-window-list span {
+    top: 6px;
+    left: 12.5px;
+    font-size: 2.5rem;
+  }
 
   .close-popup-window-item {
     height: 40px;
@@ -414,9 +428,47 @@ a {
     font-size: 2.5rem;
   }
 
+  .note-in-popup-window-list {
+    font-size: 1.5rem;
+  }
+
   .note-in-popup-window-item {
     margin-top: 50px;
+    font-size: 1.3rem;
+  }
+
+  .first-heading-in-popup-window-list-change {
+    font-size: 2rem;
+  }
+
+  .first-heading-in-popup-window-list {
+    font-size: 2rem;
+  }
+
+  .second-heading-in-popup-window-list {
+    font-size: 2rem;
+  }
+
+  .first-heading-in-popup-window-item {
     font-size: 1.5rem;
+  }
+
+  .first-heading-in-popup-window-item-change {
+    font-size: 1.5rem;
+  }
+  
+  .second-heading-in-popup-window-item{
+    font-size: 1.5rem;
+  }
+
+  .popup-window-list-btn {
+    margin-top: 30px;
+    height: 60px;
+    padding: 10px;
+  }
+
+  .popup-window-btn-item {
+    font-size: 2rem;
   }
 
 }
