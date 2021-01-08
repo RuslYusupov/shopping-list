@@ -338,8 +338,8 @@ a {
 }
 
 
-@media (max-width: 375px) {
-  
+@media (max-width: 376px) {
+
   /* Pop Up Window for lists start */
 
   .close-popup-window-list {
@@ -390,6 +390,33 @@ a {
     padding: 0.5rem 0.8rem;
   }
 
+  .popup-window-btn-item {
+    margin-top: 30px;
+    height: 8%;
+  }
+
   /* Pop Up Window for items end */
+
+}
+
+
+@media (max-width: 321px) {
+  
+
+  .close-popup-window-item {
+    height: 40px;
+    width: 40px;
+  }
+  
+  .close-popup-window-item span {
+    top: 6px;
+    left: 12.5px;
+    font-size: 2.5rem;
+  }
+
+  .note-in-popup-window-item {
+    margin-top: 50px;
+    font-size: 1.5rem;
+  }
 
 }
