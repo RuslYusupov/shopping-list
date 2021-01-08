@@ -9,6 +9,8 @@ import searchIcon from '../../icons/search.svg';
 
 import ConditionalLists from "../ConditionalLists/ConditionalLists";
 
+import clearSearch from '../../icons/clear-search.svg';
+
 function ShoppingLists() {
     
     const {removeAllLists} = useContext(Context);
@@ -49,7 +51,12 @@ function ShoppingLists() {
         setInputDataSearch(value); 
     }
 
+    function clearSearchBtn() {
+        setInputDataSearch("");
+    }
+
     // Search end
+
 
     const [showControlPanel, setShowControlPanel] = useState(false);
     function toggleShowControlPanel() {
@@ -74,7 +81,8 @@ function ShoppingLists() {
                         onChange={handleChange}
                         value={inputDataSearch}
                     />
-                    <img alt="search" src={searchIcon} />
+                    <img className="searchInputImg" alt="Search" src={searchIcon} />
+                    <span className="clearSearchBtn" onClick={clearSearchBtn}><img className="clearSearchBtnImg" src={clearSearch} alt="Clear Search" /></span>
                 </div>                              
             </nav>
             
