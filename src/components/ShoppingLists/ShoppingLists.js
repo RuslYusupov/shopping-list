@@ -73,7 +73,16 @@ function ShoppingLists() {
             <nav className="add-and-search">
                 
                 <div onClick={openPopup} className="create-new-list-btn">Create new List</div>
+                
+                {
+                showControlPanel ? 
+
+                <div onClick={toggleShowControlPanel} className="show-control-panel-btn">Close control panel</div>
+                :
                 <div onClick={toggleShowControlPanel} className="show-control-panel-btn">Show control panel</div>
+
+                }
+                
                 <div className="search-bar">
                     <input
                         type="text"
@@ -81,8 +90,8 @@ function ShoppingLists() {
                         onChange={handleChange}
                         value={inputDataSearch}
                     />
-                    <img className="searchInputImg" alt="Search" src={searchIcon} />
-                    <span className="clearSearchBtn" onClick={clearSearchBtn}><img className="clearSearchBtnImg" src={clearSearch} alt="Clear Search" /></span>
+                    <img className="search-input-img" alt="Search" src={searchIcon} />
+                    <div className="clear-search-btn" onClick={clearSearchBtn}><img className="clear-search-btn-img" src={clearSearch} alt="Clear Search" /></div>
                 </div>                              
             </nav>
             

@@ -9,6 +9,8 @@ import PopupWindowAddItem from "../PopupWindowAddItem/PopupWindowAddItem";
 import ConditionalItems from "../ConditionalItems/ConditionalItems";
 import VisualisationDonutComponent from "../VisualisationDonutComponent/VisualisationDonutComponent";
 
+import backNavigationalIcon from '../../icons/back-navigational.svg';
+
 
 function BuyItems() {
     
@@ -79,6 +81,7 @@ function BuyItems() {
         <main>   
                 <div className="back-to-lists-block">
                     <Link to="/" style={{ color: 'black' }}><span className="back-to-lists-btn">Back to lists</span></Link>
+                    <div className="back-navigational-icon-container"><img className="back-navigational-icon" src={backNavigationalIcon} alt="Navigation Arrow" /></div>
                 </div>
                 
                 {
@@ -90,7 +93,15 @@ function BuyItems() {
                 
                 <div className="add-and-control">
                     <div onClick={openPopup} className="add-item-btn">Add New Item</div>
+                    
+                    {
+                    showControlPanel ?
+                    <div onClick={toggleShowControlPanel} className="show-control-pan-btn">Close control panel</div>
+                    :
                     <div onClick={toggleShowControlPanel} className="show-control-pan-btn">Show control panel</div>
+
+                    }
+
                 </div>
 
                 

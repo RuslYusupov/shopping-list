@@ -45,7 +45,7 @@
     flex: 4 0 80%;
 }
 
-.searchInputImg {
+.search-input-img {
   top: 6px;
   left: 195px;
   height: 25px;
@@ -53,7 +53,7 @@
   position: absolute;
 }
 
-.clearSearchBtn {
+.clear-search-btn {
   margin-left: 5%;
   background-image: linear-gradient(to right, #ebadae 0%, #e5a6ae 51%, #d89aa7 100%);
   position: relative;
@@ -62,7 +62,7 @@
   flex: 1 0 20%;
 }
 
-.clearSearchBtnImg {
+.clear-search-btn-img {
   height: 30px;
   width: 30px;
   position: absolute;
@@ -76,63 +76,63 @@
 }
 
 @media (max-width: 2500px) {
-  .searchInputImg {
+  .search-input-img {
     left: 250px;
   }
 
-  .searchInputImg {
+  .search-input-img {
     left: 71%;
   }
 
-  .clearSearchBtn {
+  .clear-search-btn {
     flex: 1 0 12%;
   }
   
-  .clearSearchBtnImg {
+  .clear-search-btn-img {
     left: 12%;
   }
 }
 
 @media (max-width: 1900px) {
-  .searchInputImg {
+  .search-input-img {
     left: 192px;
   }
 }
 
 @media (max-width: 1760px) {
-  .searchInputImg {
+  .search-input-img {
     left: 176px;
   }
 
-  .clearSearchBtn {
+  .clear-search-btn {
     flex: 1 0 13%;
   }
   
-  .clearSearchBtnImg {
+  .clear-search-btn-img {
     left: 13%;
   }
 }
 
 @media (max-width: 1600px) {
-  .searchInputImg {
+  .search-input-img {
     left: 150px;
   }
 
-  .clearSearchBtn {
+  .clear-search-btn {
     flex: 1 0 20%;
   }
   
 }
 
 @media (max-width: 1537px) {
-  .searchInputImg {
+  .search-input-img {
     left: 145px;
   }
 
 }
 
 @media (max-width: 1400px) {
-  .searchInputImg {
+  .search-input-img {
     left: 142px;
   }
 
@@ -144,25 +144,25 @@
     padding: 10px 25px;
   }
 
-  .searchInputImg {
+  .search-input-img {
     left: 142px;
   }
 
 }
 
 @media (max-width: 1127px) {
-  .searchInputImg {
+  .search-input-img {
     left: 135px;
   }
 
-  .clearSearchBtn {
+  .clear-search-btn {
     flex: 1 0 25%;
   }
 
 }
 
 @media (max-width: 992px) {
-  .searchInputImg {
+  .search-input-img {
     left: 142px;
   }
 
@@ -171,11 +171,11 @@
 }
 
 @media (max-width: 801px) {
-  .searchInputImg {
+  .search-input-img {
     left: 142px;
   }
 
-  .clearSearchBtn {
+  .clear-search-btn {
     flex: 1 0 30%;
   }
 
@@ -205,16 +205,16 @@
     font-size: 2rem;
 }
 
-  .searchInputImg {
+  .search-input-img {
     top: 21%;
     left: 70%;
   }
 
-  .clearSearchBtn {
+  .clear-search-btn {
     flex: 1 0 16%;
   }
   
-  .clearSearchBtnImg {
+  .clear-search-btn-img {
     left: 25%;
     top: 17%;
   }
