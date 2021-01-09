@@ -32,7 +32,7 @@ function PopupWindowChangeItem(props) {
             onChange={handleChange}
             value={inputData.units}
          />
-         <p className="second-heading-in-popup-window-item">Change Expected Price:</p>
+         <p className="second-heading-in-popup-window-item">Change Expected Price (Write Only The Number):</p>
         <input
             type="number"
             name="expectedPrice"

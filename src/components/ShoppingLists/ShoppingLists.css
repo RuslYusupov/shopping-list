@@ -203,7 +203,7 @@
   .add-and-search input {
     flex: 4 0 80%;
     font-size: 2rem;
-}
+  }
 
   .search-input-img {
     top: 21%;
@@ -218,6 +218,19 @@
     left: 25%;
     top: 17%;
   }
+
+}
+
+@media (max-width: 321px) {
+
+  .add-and-search input {
+    font-size: 1.5rem;
+  }
+
+  .search-input-img {
+    left: 69%;
+  }
+
 
 }
 
