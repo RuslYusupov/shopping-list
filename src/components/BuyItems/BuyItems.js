@@ -97,6 +97,29 @@ function BuyItems() {
     }
 
 
+
+    let colorOfShowAllBtn;
+    if(completedFilterItem.all === true) {
+        colorOfShowAllBtn = "control-elements-btn-green";
+    } else if (completedFilterItem.all === false) {
+        colorOfShowAllBtn = "control-elements-btn";
+    }
+
+    let colorOfShowCompletedBtn;
+    if(completedFilterItem.completed === true) {
+        colorOfShowCompletedBtn = "control-elements-btn-green";
+    } else if (completedFilterItem.completed === false) {
+        colorOfShowCompletedBtn = "control-elements-btn";
+    }
+
+    let colorOfShowUncompletedBtn;
+    if(completedFilterItem.uncompleted === true) {
+        colorOfShowUncompletedBtn = "control-elements-btn-green";
+    } else if (completedFilterItem.uncompleted === false) {
+        colorOfShowUncompletedBtn = "control-elements-btn";
+    }
+
+
     return (
         <main>   
                 <div className="back-to-lists-block">
@@ -146,13 +169,13 @@ function BuyItems() {
                     </nav>
                     
                     <nav className="control-elements-row">
-                        <div onClick={() => setCompletedFilterItem({all: true, completed: false, uncompleted: false})} className="control-elements-btn">Show All Items</div>
-                        <div onClick={() => setCompletedFilterItem({all: false, completed: true, uncompleted: false})} className="control-elements-btn">Show Completed Items</div>
-                        <div onClick={() => setCompletedFilterItem({all: false, completed: false, uncompleted: true})} className="control-elements-btn">Show Uncompleted Items</div>
+                        <div onClick={() => setCompletedFilterItem({all: true, completed: false, uncompleted: false})} className={colorOfShowAllBtn}>Show All Items</div>
+                        <div onClick={() => setCompletedFilterItem({all: false, completed: true, uncompleted: false})} className={colorOfShowCompletedBtn}>Show Completed Items</div>
+                        <div onClick={() => setCompletedFilterItem({all: false, completed: false, uncompleted: true})} className={colorOfShowUncompletedBtn}>Show Uncompleted Items</div>
                     </nav>
                     <nav className="control-elements-row">
                         <div onClick={toggleSortByExpectedPrice} className="control-elements-btn">Sort by Expected Price ({sortExpectedPrice})</div>
-                        <div onClick={toggleSortByAlphabet} className="control-elements-btn">Sort by Alphabet ({sortAlphabetText})</div>
+                        <div onClick={toggleSortByAlphabet} className="control-elements-btn">Sort Names by Alphabet ({sortAlphabetText})</div>
                     </nav>
                 
                 </div>

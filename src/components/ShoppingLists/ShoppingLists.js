@@ -85,6 +85,26 @@ function ShoppingLists() {
         sortAlphabetText = "Z - A";
     }
 
+    let colorOfShowAllBtn;
+    if(completedFilterList.all === true) {
+        colorOfShowAllBtn = "control-elements-btn-green";
+    } else if (completedFilterList.all === false) {
+        colorOfShowAllBtn = "control-elements-btn";
+    }
+
+    let colorOfShowCompletedBtn;
+    if(completedFilterList.completed === true) {
+        colorOfShowCompletedBtn = "control-elements-btn-green";
+    } else if (completedFilterList.completed === false) {
+        colorOfShowCompletedBtn = "control-elements-btn";
+    }
+
+    let colorOfShowUncompletedBtn;
+    if(completedFilterList.uncompleted === true) {
+        colorOfShowUncompletedBtn = "control-elements-btn-green";
+    } else if (completedFilterList.uncompleted === false) {
+        colorOfShowUncompletedBtn = "control-elements-btn";
+    }
 
 
     return(
@@ -119,14 +139,14 @@ function ShoppingLists() {
             <div className="control-elements">
                 
                 <nav className="control-elements-row">
-                    <div onClick={() => setCompletedFilterList({all: true, completed: false, uncompleted: false})} className="control-elements-btn">Show All Lists</div>
-                    <div onClick={() => setCompletedFilterList({all: false, completed: true, uncompleted: false})} className="control-elements-btn">Show Completed Lists</div>
-                    <div onClick={() => setCompletedFilterList({all: false, completed: false, uncompleted: true})} className="control-elements-btn">Show Uncompleted Lists</div>
+                    <div onClick={() => setCompletedFilterList({all: true, completed: false, uncompleted: false})} className={colorOfShowAllBtn}>Show All Lists</div>
+                    <div onClick={() => setCompletedFilterList({all: false, completed: true, uncompleted: false})} className={colorOfShowCompletedBtn}>Show Completed Lists</div>
+                    <div onClick={() => setCompletedFilterList({all: false, completed: false, uncompleted: true})} className={colorOfShowUncompletedBtn}>Show Uncompleted Lists</div>
                 </nav>
 
                 <nav className="control-elements-row">
-                    <div onClick={toggleSortByNumberOfItems} className="control-elements-btn">Sort by number of items ({sortNumberOfItemText})</div>
-                    <div onClick={toggleSortByAlphabet} className="control-elements-btn">Sort by Alphabet ({sortAlphabetText})</div>
+                    <div onClick={toggleSortByNumberOfItems} className="control-elements-btn">Sort by Number of Items ({sortNumberOfItemText})</div>
+                    <div onClick={toggleSortByAlphabet} className="control-elements-btn">Sort Names by Alphabet ({sortAlphabetText})</div>
                     <div onClick={removeAllLists} className="control-elements-btn">Remove all Lists</div>
                 </nav>
                 
