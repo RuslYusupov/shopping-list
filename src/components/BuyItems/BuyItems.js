@@ -42,7 +42,7 @@ function BuyItems() {
 
     const [completedFilterItem, setCompletedFilterItem] = useState({all: true, completed: false, uncompleted: false});
 
-    const [sortByExpectedPrice, setSortByExpectedPrice] = useState({clicked: false, sort: false});
+    const [sortByExpectedPrice, setSortByExpectedPrice] = useState({clicked: false, sort: true});
     
     const [sortByAlphabet, setSortByAlphabet] = useState({clicked: false, sort: false});
 
@@ -82,6 +82,19 @@ function BuyItems() {
     }
 
 
+    let sortExpectedPrice;
+    if(sortByExpectedPrice.sort === true) {
+        sortExpectedPrice = "0 - 100";
+    } else if (sortByExpectedPrice.sort === false) {
+        sortExpectedPrice = "100 - 0";
+    }
+
+    let sortAlphabetText;
+    if(sortByAlphabet.sort === false) {
+        sortAlphabetText = "A - Z";
+    } else if (sortByAlphabet.sort === true) {
+        sortAlphabetText = "Z - A";
+    }
 
 
     return (
@@ -138,8 +151,8 @@ function BuyItems() {
                         <div onClick={() => setCompletedFilterItem({all: false, completed: false, uncompleted: true})} className="control-elements-btn">Show Uncompleted Items</div>
                     </nav>
                     <nav className="control-elements-row">
-                        <div onClick={toggleSortByExpectedPrice} className="control-elements-btn">Sort by Expected Price</div>
-                        <div onClick={toggleSortByAlphabet} className="control-elements-btn">Sort by Alphabet</div>
+                        <div onClick={toggleSortByExpectedPrice} className="control-elements-btn">Sort by Expected Price ({sortExpectedPrice})</div>
+                        <div onClick={toggleSortByAlphabet} className="control-elements-btn">Sort by Alphabet ({sortAlphabetText})</div>
                     </nav>
                 
                 </div>

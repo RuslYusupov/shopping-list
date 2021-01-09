@@ -27,7 +27,7 @@ function ShoppingLists() {
 
     const [completedFilterList, setCompletedFilterList] = useState({all: true, completed: false, uncompleted: false});
     
-    const [sortByNumberOfItems, setSortByNumberOfItems] = useState({clicked: false, sort: false});
+    const [sortByNumberOfItems, setSortByNumberOfItems] = useState({clicked: false, sort: true});
     const [sortByAlphabet, setSortByAlphabet] = useState({clicked: false, sort: false});
 
 
@@ -71,6 +71,21 @@ function ShoppingLists() {
     }
 
 
+    let sortNumberOfItemText;
+    if(sortByNumberOfItems.sort === false) {
+        sortNumberOfItemText = "100 - 0";
+    } else if (sortByNumberOfItems.sort === true) {
+        sortNumberOfItemText = "0 - 100";
+    }
+
+    let sortAlphabetText;
+    if(sortByAlphabet.sort === false) {
+        sortAlphabetText = "A - Z";
+    } else if (sortByAlphabet.sort === true) {
+        sortAlphabetText = "Z - A";
+    }
+
+
 
     return(
         <main>
@@ -110,8 +125,8 @@ function ShoppingLists() {
                 </nav>
 
                 <nav className="control-elements-row">
-                    <div onClick={toggleSortByNumberOfItems} className="control-elements-btn">Sort by number of items</div>
-                    <div onClick={toggleSortByAlphabet} className="control-elements-btn">Sort by Alphabet</div>
+                    <div onClick={toggleSortByNumberOfItems} className="control-elements-btn">Sort by number of items ({sortNumberOfItemText})</div>
+                    <div onClick={toggleSortByAlphabet} className="control-elements-btn">Sort by Alphabet ({sortAlphabetText})</div>
                     <div onClick={removeAllLists} className="control-elements-btn">Remove all Lists</div>
                 </nav>
                 
