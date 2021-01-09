@@ -74,6 +74,13 @@ function BuyItems() {
         setShowControlPanel(prevShowControlPanel => !prevShowControlPanel);
     }
 
+    let showOrHide;
+    if(showControlPanel) {
+        showOrHide = "Hide";
+    } else if (!showControlPanel) {
+        showOrHide = "Show";
+    }
+
 
 
 
@@ -88,20 +95,28 @@ function BuyItems() {
                     popup && <PopupWindowAddItem closePopup={closePopup} currentListObj={currentListObj} listId={listId} />
                 }
                 <h1 className="heading-in-list">{nameForList}</h1>  
-                <h2 className="subtitle-in-list">Buy by: {buyBy}</h2>
-                <h2 className="subtitle-in-list">Expected Cost: {expectedCost}</h2>
+                
+
+                {
+                    buyBy !== "" ?
+                        <h2 className="subtitle-in-list">Buy by: {buyBy}</h2>
+                    :
+                    null
+                }
+
+                {
+                    expectedCost !== "No price set" ?
+                    <h2 className="subtitle-in-list">Expected Cost: {expectedCost}</h2>
+                    :
+                    null
+                }
+                
                 
                 <div className="add-and-control">
                     <div onClick={openPopup} className="add-item-btn">Add New Item</div>
                     
-                    {
-                    showControlPanel ?
-                    <div onClick={toggleShowControlPanel} className="show-control-pan-btn">Close control panel</div>
-                    :
-                    <div onClick={toggleShowControlPanel} className="show-control-pan-btn">Show control panel</div>
-
-                    }
-
+                    <div onClick={toggleShowControlPanel} className="show-control-pan-btn">{showOrHide} control panel</div>
+                
                 </div>
 
                 

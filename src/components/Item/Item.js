@@ -24,6 +24,14 @@ function Item({item}) {
         setPopup(false)
     }
 
+    let showOrHideSlashInHeading;
+
+    if(item.units !== "") {
+        showOrHideSlashInHeading = " | ";
+    } else if(item.units !== "") {
+        showOrHideSlashInHeading = "";
+    }
+
 
     return (
         
@@ -39,7 +47,7 @@ function Item({item}) {
                             <input type="checkbox" checked={item.completed} onChange={() => toggleCompleteItem(item.idOfItem, item.idOfList)}/>
                             <span className="checkbox-custom-item-card" ></span>
                         </label>
-                        <h2 style={{textDecoration: item.completed ? 'line-through' : null}}>{item.nameForItem} | {item.units} </h2>
+                        <h2 style={{textDecoration: item.completed ? 'line-through' : null}}>{item.nameForItem}{showOrHideSlashInHeading}{item.units} </h2>
                     </div>
                     <div className="icons-item-card">
                         <p className="expected-price-item-card-mobile">Expected Price: {item.expectedPrice}</p>

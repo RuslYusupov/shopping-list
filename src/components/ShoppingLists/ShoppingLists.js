@@ -63,6 +63,13 @@ function ShoppingLists() {
         setShowControlPanel(prevShowControlPanel => !prevShowControlPanel);
     }
 
+    let showOrHide;
+    if(showControlPanel) {
+        showOrHide = "Hide";
+    } else if (!showControlPanel) {
+        showOrHide = "Show";
+    }
+
 
 
     return(
@@ -74,14 +81,7 @@ function ShoppingLists() {
                 
                 <div onClick={openPopup} className="create-new-list-btn">Create new List</div>
                 
-                {
-                showControlPanel ? 
-
-                <div onClick={toggleShowControlPanel} className="show-control-panel-btn">Close control panel</div>
-                :
-                <div onClick={toggleShowControlPanel} className="show-control-panel-btn">Show control panel</div>
-
-                }
+                <div onClick={toggleShowControlPanel} className="show-control-panel-btn">{showOrHide} control panel</div>
                 
                 <div className="search-bar">
                     <input

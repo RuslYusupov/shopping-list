@@ -26,6 +26,24 @@ function ShoppingListsItem({nameForList, buyBy, items, idOfList, completed, expe
         setPopup(false)
     }
 
+    let quantityOfItems;
+
+    if(items.length === 1) {
+        quantityOfItems = "Item";
+    } else {
+        quantityOfItems = "Items";
+    }
+
+    let buyByWord;
+
+    if(buyBy === "") {
+        buyByWord = "";
+    } else if(buyBy !== "") {
+        buyByWord = " | Buy by: ";
+    }
+
+
+
     return (
         
         <div>
@@ -40,7 +58,7 @@ function ShoppingListsItem({nameForList, buyBy, items, idOfList, completed, expe
                             <input type="checkbox" checked={completed} onChange={() => toggleCompleteList(idOfList)}/>
                             <span className="checkbox-custom-list-item-card"></span>
                         </label>
-                        <Link to={`/${idOfList}`} style={{ color: 'black' }}><h2 style={{textDecoration: completed ? 'line-through' : null}}>{nameForList} | Buy by: {buyBy}</h2></Link>
+                        <Link to={`/${idOfList}`} style={{ color: 'black' }}><h2 style={{textDecoration: completed ? 'line-through' : null}}>{nameForList}{buyByWord}{buyBy}</h2></Link>
                     </div>
                     <div className="icons-list-item-card">
                         <Link to={`/${idOfList}`} style={{ textDecoration: 'none' }}><div className="goIn-list-item-card"><img src={goInList} alt="GoIn" /></div></Link>
@@ -49,8 +67,19 @@ function ShoppingListsItem({nameForList, buyBy, items, idOfList, completed, expe
                     </div>
                 </div>
                 <div className="quantity-and-cost-list-item-card">
-                    <p className="quantity-list-item-card">{items.length} Items</p>
-                    <p className="expected-cost-list-item-card">Expected Cost: {expectedCost}</p>
+                    <p className="quantity-list-item-card">{items.length} {quantityOfItems}</p>
+                    
+                    {
+                        expectedCost !== "No price set" ? 
+                        <p className="expected-cost-list-item-card">Expected Cost: {expectedCost}</p>
+                        :
+                        null
+
+                    }
+                    
+                    
+
+
                 </div>
             </div>
 

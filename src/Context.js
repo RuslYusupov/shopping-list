@@ -177,7 +177,13 @@ function ContextProvider({children}) {
 
             if(idOfItem) { // Активируется в том случае если был удален айтем
                 const itemsWithoutItem = copyOFOurListObj.items.filter(item => item.idOfItem !== idOfItem); // Переобходим айтемы и удаляем нужный нам айтем - возвращается массив из айтемов
-                takeExpectedPrices = itemsWithoutItem.map(item => item.expectedPrice); // Переобходим каждый из айтемов и в новый массив сохраняем значения ожидаемой цены каждого айтема
+                
+                if(itemsWithoutItem.length > 0) { // Если это был не последний айтем в листе
+                    takeExpectedPrices = itemsWithoutItem.map(item => item.expectedPrice); // Переобходим каждый из айтемов и в новый массив сохраняем значения ожидаемой цены каждого айтема
+                } else if(itemsWithoutItem.length === 0) { // Если это был последний айтем в листе
+                    takeExpectedPrices = ["0"]; // Так как в будущем в переменную takeExpectedPricesRemoveEmptyStrings мы будем сохранять данные из переобхода массива takeExpectedPrices. То создадим массив с одним значение строкой ноль. Чтобы был массив, который можно будет переобходить и который будет возвращать сумму из элементов массива равную 0. 
+                }
+                
             } else { // Для всех остальных ситуация - добавление и изменение айтема
                 takeExpectedPrices = copyOFOurListObj.items.map(item => item.expectedPrice); // Переобходим каждый из айтемов и в новый массив сохраняем значения ожидаемой цены каждого айтема
             }
